@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar primary>
+  <ion-navbar color="primary">
     <ion-title>Teams</ion-title>
   </ion-navbar>
 
@@ -15,11 +15,9 @@
 
 <ion-content padding>
     <ion-content>
-        <button ion-item (click)="itemTapped()">
-          HC Elite
+        <button ion-item *ngFor="let team of teams" (click)="itemTapped($event, team)">
+          {{team.name}}
         </button>
-        <button ion-item (click)="itemTapped()">
-            Team takeover
-          </button>
+        
       </ion-content>
 </ion-content>
