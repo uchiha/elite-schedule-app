@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {MyTeamsPage} from '../pages';
 
 /**
  * Generated class for the TournamentsPage page.
@@ -21,4 +22,10 @@ export class TournamentsPage {
     console.log('ionViewDidLoad TournamentsPage');
   }
 
+  navigate(){
+    // provides a way to navigate backward. But other pages
+    // other than that of the homepage will have a back button
+    // automatic in ionic framework.
+    this.navCtrl.pop(); 
+  }
 }
