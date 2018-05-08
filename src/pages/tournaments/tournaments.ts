@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {MyTeamsPage} from '../pages';
+import {MyTeamsPage, TeamsPage} from '../pages';
 
 /**
  * Generated class for the TournamentsPage page.
@@ -27,5 +27,9 @@ export class TournamentsPage {
     // other than that of the homepage will have a back button
     // automatic in ionic framework.
     this.navCtrl.pop(); 
+  }
+
+  itemTapped(){
+    this.navCtrl.push(TeamsPage);
   }
 }
