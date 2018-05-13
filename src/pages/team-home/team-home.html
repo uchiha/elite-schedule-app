@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>TeamHome</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>{{team.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,7 +17,12 @@
      ion-content 
 -->
 
+<!--
+  team-home.ts already has the team parameter. We just need to pass it
+  to the tabs, that is why we have the attribute [rootParams]
+-->
+
 <ion-tabs>
-  <ion-tab tabTitle="Team" [root]="teamDetailTab" tabIcon="basketball"></ion-tab>
-  <ion-tab tabTitle="Standings" [root]="standingsTab" tabIcon="podium"></ion-tab>
+  <ion-tab tabTitle="Team" [root]="teamDetailTab" [rootParams]="team" tabIcon="basketball"></ion-tab>
+  <ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]="team" tabIcon="podium"></ion-tab>
 </ion-tabs>
